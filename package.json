@@ -1,0 +1,69 @@
+{
+  "name": "chat-backend",
+  "version": "1.0.0",
+  "description": "Production-ready chat backend application with NestJS and Bun",
+  "module": "src/main.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "start:dev": "bun --watch run src/main.ts",
+    "build": "bun build src/main.ts --outdir dist --target bun",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "lint": "bunx tsc --noEmit",
+    "format": "bunx prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.14",
+    "@nestjs/testing": "^11.1.11",
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.6",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/uuid": "^11.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "uuid": "^13.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.966.0",
+    "@aws-sdk/s3-request-presigner": "^3.966.0",
+    "@nestjs/common": "^11.1.11",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.11",
+    "@nestjs/jwt": "^11.0.2",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.1.11",
+    "@nestjs/platform-socket.io": "^11.1.11",
+    "@nestjs/websockets": "^11.1.11",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3",
+    "express": "^5.1.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "socket.io": "^4.8.3",
+    "zod": "^4.3.5"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": [
+    "chat",
+    "messaging",
+    "nestjs",
+    "bun",
+    "typescript",
+    "websocket",
+    "real-time"
+  ],
+  "author": "",
+  "license": "MIT"
+}
